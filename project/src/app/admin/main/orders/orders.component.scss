@@ -1,0 +1,45 @@
+.form-check {
+  margin-left: 30px;  
+  padding-top: 100px;
+}
+
+table {
+  width: 80%;
+  text-align: left;
+  margin: 50px auto;
+  border-bottom: 1px solid rgb(153, 151, 151);
+  tbody {
+    tr {
+      td {
+        height: 30px;
+        border-top: 1px solid rgb(218, 214, 214);
+      }
+      th {
+        border-top: 1px solid rgb(218, 214, 214);
+      }
+    }
+  }
+  .btn {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+  .btn-danger {
+    background-color: rgb(253, 86, 86);
+  }
+  .btn-warning {
+    background-color: rgb(248, 133, 2);
+  }
+  .btn-danger:hover {
+    background-color: rgb(248, 61, 61);
+  }
+  .btn-warning:hover {
+    background-color: rgb(248, 150, 2);
+  }
+}

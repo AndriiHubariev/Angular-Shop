@@ -1,0 +1,141 @@
+header {
+    background-color: rgba(247, 121, 121, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    color: white;
+    height: 50px;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    justify-content: space-evenly;
+    z-index: 1000;
+    box-shadow: 0 0 2px 0px rgb(97, 96, 96);
+    @media (max-width: 770px) {
+      justify-content: space-between;
+    }
+    .toggle {
+      display: none;
+      @media (max-width: 770px) {
+        display: block;
+      }
+    }
+    button {
+        border: none;
+        background: transparent;
+        outline: none;
+    }
+    .logo {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      @media (max-width: 770px) {
+        margin-right: 45%;
+      }
+    }
+    ul {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      list-style: none;
+      font-size: 0.8em;
+      padding-top: 15px;
+      @media (max-width: 770px) {
+        display: none;
+      }
+      li {
+        transition: 0.3s;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: rgb(226, 225, 225);
+          transition: 0.3s;
+        }
+        a:hover {
+          color: white;
+        }
+      }
+    }
+    .fa-shopping-cart {
+      position: relative;
+      @media (max-width: 770px) {
+        justify-self: flex-end;
+      }
+    }
+    .hidden {
+      opacity: 0;
+    }
+    .fa-bars {
+      @media (min-width: 770px) {
+        display: none;
+      }
+    }
+    i {
+      cursor: pointer;
+      color: rgb(226, 225, 225);
+      transition: 0.3s;
+    }
+    i:hover {
+      color: white;
+    }
+  }
+  // PopUP Menu
+  .popup_menu {
+    position: fixed;
+    padding-top: 50px;
+    background: black;
+    z-index: 10;
+    transition: all ease;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 50px 5px rgb(20, 20, 20);
+    .menu_input {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid rgb(88, 87, 87);
+      padding-bottom: 20px;
+      transition: 0.9s ease-out;
+    }
+    input {
+      width: 70%;
+      margin-top: 20px;
+      height: 30px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(27, 27, 27, 0.8);
+      outline: none;
+      color: white;
+    }
+    ul {
+      margin: 10px 0 0 0;
+      padding: 0;
+      width: 70%;
+      list-style: none;
+  
+      li {
+        padding: 10px 0 10px 0;
+        color: rgb(145, 143, 143);
+        border-bottom: 1px solid rgb(88, 87, 87);
+        cursor: pointer;
+        transition: 0.3s;
+        outline: none;
+      }
+      li:last-child {
+        border: none;
+      }
+      li:hover {
+        color: white;
+      }
+    }
+  }
+ 

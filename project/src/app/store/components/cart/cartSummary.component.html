@@ -1,0 +1,4 @@
+<div class="cart">
+  <small *ngIf="cart.itemCount > 0">{{cart.itemCount}}</small>
+  <i [class.active]="cart.itemCount > 0" class="fas fa-shopping-bag"></i>
+</div>

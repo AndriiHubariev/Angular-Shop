@@ -1,0 +1,70 @@
+<header>
+    <div class="prod_name">{{product.name}}</div>
+    <button (click)="addProductToCart(product)">Buy</button>
+</header>
+<div #cont class="prodContainer">
+    <div class="first_section">
+        <h1>{{product.name}}</h1>
+        <h3>The best price {{product.price | currency: 'USD'}}</h3>
+        <a routerLink="/">Back to store</a>
+        <p style="margin-top: 10px;">
+            <ngb-rating [max]="5" [(rate)]="currentRate"></ngb-rating> 
+        </p>
+    </div>
+    <div class="second_section">
+        <div class="img"><img src="{{product.img}}" alt="" srcset=""></div>
+        <div class="about">
+            <p>About product:</p>
+            {{product.description}}
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="top">
+      <div class="about">
+        <div routerLink="/" class="logo">
+            <i  class="fas fa-mouse"></i>
+        </div>
+        <div class="about_us">
+          <p>About Us</p>
+          <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nobis!</div>
+        </div>
+        <div class="contact_us">
+          <p>Contact Us</p>
+          <div class="phone"><i class="fas fa-phone-volume"></i> : +380934782387</div>
+          <div class="email"><i class="fas fa-envelope"></i> : some@email.com</div>
+        </div>
+      </div>
+      <div class="information">
+        <p>Information</p>
+        <a routerLink="/about">About Us</a>
+        <a routerLink="#">Events</a>
+        <a routerLink="#">Blog</a>
+      </div>
+      <div class="links">
+        <p>Helpful Links</p>
+        <a routerLink="#">Services</a>
+        <a routerLink="#">Supports</a>
+        <a routerLink="#">Team</a>
+        <a routerLink="#">Privacy Policy</a>
+      </div>
+      <div class="subscribe">
+        <span>
+          Subscribe more info
+        </span>
+        <input [(ngModel)]="footerEmail" placeholder="email" type="text">
+        <button (click)="sendEmail()">Subscribe</button>
+      </div>
+    </div>
+    <div class="down">
+      <div class="social">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-google-plus"></i>
+        <i class="fab fa-instagram-square"></i>
+      </div>
+      <div class="copirate">
+        2020 &copy; Best Company. All Right Reserved
+      </div>
+    </div>
+  </footer>

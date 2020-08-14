@@ -1,0 +1,84 @@
+<div [@remove] *ngIf="cart.lines.length > 0" class="header">
+  <h1>Review your bag.</h1>
+</div>
+<div class="carts_container">
+  <div [@remove] class="cart" *ngFor="let l of cart.lines">
+    <div class="img">
+      <img src="{{l.product.img}}" alt="">
+    </div>
+    <div class="detailse">
+      <span>{{l.product.name}}</span>
+      <select (change)="cart.updateQuantity(l.product, $event.target.value)" value="{{l.quantity}}" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <span>{{l.lineTotal | currency: "USD":true:"2.2-2"}}</span>
+      <button (click)="cart.removeLine(l.product.id)">Remove</button>
+    </div>
+   </div>
+   <div [@remove] *ngIf="cart.lines.length > 0" class="total_prise">
+    <a routerLink="/home">Home</a>
+     <a routerLink="/checkout">Check out</a>
+     <div class="prise">
+       Total: {{cart.cartPrice | currency:'USD':true:'2.2-4'}}
+     </div>
+  </div>
+  <div [@show] *ngIf="cart.lines.length === 0" class="empty">
+    <p>your cart is empty</p>
+    <a routerLink="/home">see products</a>
+  </div>
+</div>
+<footer>
+  <div class="top">
+    <div class="about">
+      <div routerLink="/" class="logo">
+          <i  class="fas fa-mouse"></i>
+      </div>
+      <div class="about_us">
+        <p>About Us</p>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nobis!</div>
+      </div>
+      <div class="contact_us">
+        <p>Contact Us</p>
+        <div class="phone"><i class="fas fa-phone-volume"></i> : +380934782387</div>
+        <div class="email"><i class="fas fa-envelope"></i> : some@email.com</div>
+      </div>
+    </div>
+    <div class="information">
+      <p>Information</p>
+      <a routerLink="/about">About Us</a>
+      <a routerLink="#">Events</a>
+      <a routerLink="#">Blog</a>
+    </div>
+    <div class="links">
+      <p>Helpful Links</p>
+      <a routerLink="#">Services</a>
+      <a routerLink="#">Supports</a>
+      <a routerLink="#">Team</a>
+      <a routerLink="#">Privacy Policy</a>
+    </div>
+    <div class="subscribe">
+      <span>
+        Subscribe more info
+      </span>
+      <input [(ngModel)]="footerEmail" placeholder="email" type="text">
+      <button (click)="sendEmail()">Subscribe</button>
+    </div>
+  </div>
+  <div class="down">
+    <div class="social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter-square"></i>
+      <i class="fab fa-google-plus"></i>
+      <i class="fab fa-instagram-square"></i>
+    </div>
+    <div class="copirate">
+      2020 &copy; Best Company. All Right Reserved
+    </div>
+  </div>
+</footer>
+
+

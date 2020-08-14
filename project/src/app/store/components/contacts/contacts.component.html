@@ -1,0 +1,77 @@
+<div class="wrapper">
+  <div class="picture">
+
+  </div>
+  <div class="contacts">
+    <div  class="contacts_inner visit">
+      <i [@bounce] class="fas fa-home"></i>
+      <h5>Visit us</h5>
+      <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+      <p>Elizabeth, London, UK</p>
+    </div>
+    <div class="contacts_inner call">
+      <i [@bounce]  class="fas fa-phone-volume"></i>
+      <h5>Call us</h5>
+      <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+      <p>+380934782387</p>
+    </div>
+    <div class="contacts_inner message">
+      <i  [@bounce] class="fas fa-envelope"></i>
+      <h5>Message us</h5>
+      <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+      <p>some@email.com</p>
+    </div>
+  </div>
+  <div class="map">
+    <google-map [center]="center" height="100%" width="100%"></google-map>
+  </div>
+</div>
+<footer>
+    <div class="top">
+      <div class="about">
+        <div routerLink="/" class="logo">
+            <i  class="fas fa-mouse"></i>
+        </div>
+        <div class="about_us">
+          <p>About Us</p>
+          <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nobis!</div>
+        </div>
+        <div class="contact_us">
+          <p>Contact Us</p>
+          <div class="phone"><i class="fas fa-phone-volume"></i> : +380934782387</div>
+          <div class="email"><i class="fas fa-envelope"></i> : some@email.com</div>
+        </div>
+      </div>
+      <div class="information">
+        <p>Information</p>
+        <a routerLink="/about">About Us</a>
+        <a routerLink="#">Events</a>
+        <a routerLink="#">Blog</a>
+      </div>
+      <div class="links">
+        <p>Helpful Links</p>
+        <a routerLink="#">Services</a>
+        <a routerLink="#">Supports</a>
+        <a routerLink="#">Team</a>
+        <a routerLink="#">Privacy Policy</a>
+      </div>
+      <div class="subscribe">
+        <span>
+          Subscribe more info
+        </span>
+        <input [(ngModel)]="footerEmail" placeholder="email" type="text">
+        <button (click)="sendEmail()">Subscribe</button>
+      </div>
+    </div>
+    <div class="down">
+      <div class="social">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-google-plus"></i>
+        <i class="fab fa-instagram-square"></i>
+      </div>
+      <div class="copirate">
+        2020 &copy; Best Company. All Right Reserved
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,64 @@
+@import "../../../variables.scss";
+.table_container {
+  position: relative;
+  padding-top: 100px;
+  overflow: hidden;
+  width: 100%;
+  @media (max-width: 750px) {
+  }
+}
+table {
+  position: relative;
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+  @media (max-width: 900px) {
+    width: 90%;
+    font-size: 11px;
+  }
+}
+
+td {
+  border-bottom: 1px solid rgb(170, 170, 170);
+  width: 30%;
+  img {
+    width: 80%;
+  }
+}
+
+.btn {
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  margin-top: 10px;
+  transition: 0.2s;
+  @media (max-width: 800px) {
+    font-size: 13px;
+  }
+  @media (max-width: 700px) {
+    font-size: 10px;
+  }
+}
+.btn-warning {
+  background-color: orange;
+}
+.btn-danger {
+  background-color: rgb(255, 38, 0);
+}
+.btn-warning:hover {
+  background-color: rgb(253, 194, 84);
+}
+.btn-danger:hover {
+  background-color: rgb(248, 117, 94);
+}
+.btn-primary:hover {
+  background-color: rgb(128, 192, 252);
+}
+.btn-primary {
+  position: absolute;
+  top: 50px;
+  background-color: $button-color;
+}

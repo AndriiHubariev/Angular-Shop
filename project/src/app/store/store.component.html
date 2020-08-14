@@ -1,0 +1,40 @@
+<header>
+  <div class="toggle">
+    <i *ngIf="!menuToggle" (click)="showMenu($event)" class="fas fa-bars"></i>
+    <i *ngIf="menuToggle" (click)="showMenu($event)" class="fas fa-times"></i>
+  </div>
+  <span routerLink="/home" class="logo">
+    <i class="fas fa-mouse"></i>
+  </span>
+  <ul [@trigger] *ngIf="!menuToggle && !searchWindow">
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/contacts" routerLinkActive="active">Contacts</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+    <li><a routerLink="/admin">Admin</a></li>
+  </ul>
+  <div [@inpt] *ngIf="!menuToggle && searchWindow" class="search">
+    <i class="fas fa-search"></i>
+    <input type="text">
+    <i (click)="searchWindow = false" class="fas fa-times"></i>
+  </div>
+  <i *ngIf="!menuToggle && !searchWindow" (click)="searchWindow = true" class="fas fa-search"></i>
+  <button
+    [class.hidden]="menuToggle"
+    [disabled]="cart.itemCount == 0"
+    routerLink="/cart"
+  >
+    <app-cart-summary></app-cart-summary>
+  </button>
+</header>
+<div [@menu] *ngIf="menuToggle" class="popup_menu">
+  <div class="menu_input">
+    <input type="text" placeholder="  search" />
+  </div>
+  <ul (click)="menuToggle = false">
+    <li routerLink="/home">Home</li>
+    <li routerLink="/contacts">Contact</li>
+    <li routerLink="/about">About Us</li>
+    <li routerLink="/admin">Admin</li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

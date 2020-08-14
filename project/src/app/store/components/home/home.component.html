@@ -1,0 +1,115 @@
+<div id="par" appParallax class="parallax">
+  <div class="layer layer1">
+    <!-- <div class="layer_about">
+        <p>About product</p>
+        <a pageScroll href="#prod">See all</a>
+      </div> -->
+    <img
+      class="keyboard"
+      src="../../assets/kisspng-magic-mouse-2-computer-mouse-apple-mouse-magic-mouse-5b4d053795ef63.3306832615317742636141.png"
+      alt=""
+    />
+    <img src="../../assets/mk4.png" alt="" />
+    <video
+      src="../../../../assets/macbook.mp4"
+      type="video/mp4"
+      autoplay
+      [muted]="'muted'"
+      loop
+    ></video>
+  </div>
+  <div class="layer layer2">
+    <h1>Some Cool Text About Products</h1>
+    <div [ngSwitch]="moveSlide" class="slider">
+      <p [@moveSlide] *ngSwitchCase="1">Fancy text</p>
+      <p [@moveSlide] *ngSwitchCase="2">Second fancy text</p>
+      <p [@moveSlide] *ngSwitchCase="3">Third fancy text</p>
+    </div>
+    <a pageScrollSpeed="1000" pageScroll href="#prod">All Products</a>
+  </div>
+</div>
+<div class="products">
+  <h2 id="prod">All Products</h2>
+  <div class="products_categories">
+    <span
+      [class.activeCategory]="c === selectedCategory"
+      (click)="selectedCategory = c"
+      *ngFor="let c of categories"
+      >{{ c | titlecase }}</span
+    >
+    <span (click)="selectedCategory = null">All</span>
+  </div>
+  <div class="products_all">
+    <div appRotate *ngFor="let p of products" class="product_cart">
+      <div class="about">
+        <h3 class="h3">{{ p.name }}</h3>
+        <span class="span" readonly="true">About product in short</span>
+        <p class="p">{{ p.price | currency: "USD" }}</p>
+        <div class="btns">
+          <button (click)="addProductToCart(p)">+ Add</button>
+          <button [routerLink]="['/product', p.id]">About ></button>
+        </div>
+      </div>
+      <img src="{{ p.img }}" />
+    </div>
+  </div>
+  <!-- footer -->
+  <footer>
+    <div class="top">
+      <div class="about">
+        <div class="logo">
+          <a pageScrollSpeed="1000" pageScroll scrollTop href="#prod"
+            ><i class="fas fa-mouse"></i
+          ></a>
+        </div>
+        <div class="about_us">
+          <p>About Us</p>
+          <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit,
+            nobis!
+          </div>
+        </div>
+        <div class="contact_us">
+          <p>Contact Us</p>
+          <div class="phone">
+            <i class="fas fa-phone-volume"></i> : +380934782387
+          </div>
+          <div class="email">
+            <i class="fas fa-envelope"></i> : some@email.com
+          </div>
+        </div>
+      </div>
+      <div class="information">
+        <p>Information</p>
+        <a routerLink="/about">About Us</a>
+        <a routerLink="#">Events</a>
+        <a routerLink="#">Blog</a>
+      </div>
+      <div class="links">
+        <p>Helpful Links</p>
+        <a routerLink="#">Services</a>
+        <a routerLink="#">Supports</a>
+        <a routerLink="#">Team</a>
+        <a routerLink="#">Privacy Policy</a>
+      </div>
+      <div class="subscribe">
+        <span>
+          Subscribe more info
+        </span>
+        <input [(ngModel)]="footerEmail" placeholder="email" type="text" />
+        <button (click)="sendEmail()">Subscribe</button>
+      </div>
+    </div>
+    <div class="down">
+      <div class="social">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-google-plus"></i>
+        <i class="fab fa-instagram-square"></i>
+      </div>
+      <div class="copirate">
+        2020 &copy; Best Company. All Right Reserved
+      </div>
+    </div>
+  </footer>
+</div>

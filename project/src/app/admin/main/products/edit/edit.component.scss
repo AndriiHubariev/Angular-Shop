@@ -1,0 +1,65 @@
+@import '../../../../variables.scss';
+h3 {
+    width: 20%;
+    position: relative;
+    margin: 100px auto 10px;
+    text-align: center;
+    @media (max-width: 750px) {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        color: gray;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        input {
+            height: 30px;
+        }
+
+        textarea {
+            height: 50px;
+        }
+    }
+
+    .btn {
+        border: none;
+        padding: 5px;
+        background-color: rgb(25, 160, 25);
+        margin-bottom: 5px;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+        transition: .3s;
+    }
+    .btn-primary {
+        margin-top: 20px;
+    }
+    .btn-secondary {
+        background-color: rgb(250, 160, 133);
+    }
+    .btn-primary:hover {
+        background-color: rgb(1, 94, 1);
+    }
+    .btn-secondary:hover {
+        background-color: rgb(248, 108, 69);
+    }
+    span {
+        width: 30%;
+        img {
+            width: 100%;
+        }
+    }
+}

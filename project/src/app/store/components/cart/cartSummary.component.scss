@@ -1,0 +1,33 @@
+.cart {
+    position: relative;
+    i {
+        position: relative;
+        z-index: 0;
+        cursor: pointer;
+        color:rgb(226, 225, 225);
+        transition: .3s transform;
+    }
+    i:hover {
+        color: white;
+    }
+    .active {
+        opacity: .2;
+        transform: scale(1.4);
+    }
+    small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        top: 90%;
+        left: 120%;
+        font-size: 9px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        color: black;
+        font-weight: bold;
+        background-color: rgb(212, 209, 209);
+    }
+}

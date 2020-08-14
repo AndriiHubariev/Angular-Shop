@@ -1,0 +1,248 @@
+.wrapper {
+  padding: 50px 0 0 0 ;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .picture {
+    height: 400px;
+    width: 100%;
+    background-image: url(../../../../assets/contacts/4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .visit {
+    @media(max-width: 450px) {
+      margin-top: 10px;
+      align-self: center;
+      @media(max-width: 375px) {
+        margin-top: 30px;
+      }
+    }
+  }
+  .call {
+    @media(max-width: 450px) {
+      align-self: flex-end;
+      padding-top: 120px;
+    }
+    @media(max-width: 375px) {
+      padding-top: 50px;
+    }
+  }
+  .message {
+    @media(max-width: 450px) {
+      align-self: start;
+      margin-bottom: 100px;
+    }
+  }
+  .contacts {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    justify-content: center;
+    box-shadow: 0 0 5px 0 gray;
+    z-index: 2;
+    @media(max-width: 450px) {
+      height: 600px;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+    .contacts_inner {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      position: relative;
+      @media(max-width: 500px) {
+
+      }
+
+      i {
+        font-size: 25px;
+        color: orange;
+        margin-bottom: 10px;
+        @media(max-width: 750px) {
+          font-size: 20px;
+        }
+        @media(max-width: 500px) {
+          font-size: 15px;
+        }
+      }
+
+      h5 {
+        @media(max-width: 750px) {
+          font-size: 16px;
+        }
+        @media(max-width: 500px) {
+          font-size: 12px;
+        }
+      }
+      p {
+        @media(max-width: 500px) {
+          font-size: 11px;
+        }
+        @media(max-width: 375px) {
+          font-size: 8px;
+        }
+      }
+
+      span {
+        width: 50%;
+        font-size: 13px;
+        @media(max-width: 750px) {
+          font-size: 10px;
+        }
+        @media(max-width: 375px) {
+          font-size: 5px;
+        }
+      }
+
+      p {
+        color: orange;
+        @media(max-width: 750px) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .map {
+    height: 50%;
+    width: 100%;
+  }
+}
+
+footer {
+    width: 100%;
+    padding: 25px;
+    font-size: 12px;
+    background-color: rgba(27, 27, 27);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    @media(max-width: 750px) {
+      font-size: 10px;
+    }
+    @media(max-width: 750px) {
+      font-size: 8px;
+    }
+  
+    p {
+      color: orange;
+      margin: 0;
+      padding: 0;
+    }
+  
+    a {
+      color: white;
+    }
+  
+    .top {
+      display: flex;
+      justify-content: space-between;
+  
+      border-bottom: 1px solid white;
+  
+      .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20%;
+        .about_us {
+          div {
+            @media(max-width: 750px) {
+              font-size: 6px;
+            }
+            @media(max-width: 750px) {
+              font-size: 4px;
+              line-height: 5px;
+            }
+          }
+        }
+        .logo {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          i {
+            color: rgb(204, 202, 202);
+            font-size: 25px;
+          }
+        }
+        .contact_us {
+          @media(max-width: 460px) {
+            white-space: nowrap;
+          }
+        }
+      }
+      .information {
+        display: flex;
+        flex-direction: column;
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+      }
+      .subscribe {
+        display: flex;
+        flex-direction: column;
+        input {
+          height: 35px;
+          border-radius: 5px;
+          border: none;
+          margin-bottom: 5px;
+          @media(max-width: 750px) {
+            height: 25px;
+          }
+        }
+        span {
+          margin-bottom: 5px;
+        }
+        button {
+          border: none;
+          background-color: orange;
+          color: white;
+          border-radius: 5px;
+        }
+      }
+    }
+    .down {
+      display: flex;
+      justify-content: center;
+      height: 25px;
+      align-items: center;
+  
+      .social {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        justify-self: center;
+        i {
+          font-size: 18px;
+          color: orange;
+          margin-top: 10px;
+          cursor: pointer;
+        }
+      }
+      .copirate {
+        position: absolute;
+        right: 40px;
+        font-size: 10px;
+        @media(max-width: 750px) {
+          font-size: 6px;
+        }
+        @media(max-width: 460px) {
+          font-size: 4px;
+        }
+        @media(max-width: 320px) {
+          font-size: 3px;
+          right: 30px;
+        }
+      }
+    }
+  }
+  

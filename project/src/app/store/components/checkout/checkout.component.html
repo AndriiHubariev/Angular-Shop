@@ -1,0 +1,131 @@
+<div [@showPopup] *ngIf="submited" class="popup">
+    <div class="container">
+        <h3>Thank you</h3>
+        <p>We'ill ship your goods as soon as possible</p>
+    </div>
+</div>
+<div class="form_wrapper">
+  <div [class.submited]="submited" class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <h1>Form</h1>
+    <div class="form_content">
+      <span
+        ><label for="name">Name</label
+        ><span *ngIf="form.controls.name.touched && form.controls.name.invalid"
+          ><small *ngIf="form.controls.name.errors.required">required</small>
+          <small *ngIf="form.controls.name.errors.minlength"
+            >name should be at least 6 characters /now:
+            {{ form.controls.name.errors.minlength.actualLength }}</small
+          >
+        </span></span
+      >
+      <input formControlName="name" id="name" type="text" />
+      <span
+        ><label for="address">Address</label
+        ><span
+          *ngIf="form.controls.address.touched && form.controls.address.invalid"
+          ><small>required</small></span
+        ></span
+      >
+      <input formControlName="address" id="address" type="text" />
+      <span
+        ><label for="city">City</label
+        ><span *ngIf="form.controls.city.touched && form.controls.city.invalid"
+          ><small>required</small></span
+        ></span
+      >
+      <input formControlName="city" id="city" type="text" />
+      <span>
+        <label for="zip">Zip Code</label
+        ><span *ngIf="form.controls.zip.touched && form.controls.zip.invalid"
+          ><small *ngIf="form.controls.zip.errors.required">required</small>
+          <small
+            *ngIf="
+              form.controls.zip.errors.minlength &&
+              !form.controls.zip.errors.pattern
+            "
+            >minimum 3 characters</small
+          >
+          <small *ngIf="form.controls.zip.errors.pattern"
+            >only numbers</small
+          >
+        </span></span
+      >
+      <input formControlName="zip" id="zip" type="text" />
+      <span
+        ><label for="country">Country</label
+        ><span
+          *ngIf="form.controls.country.touched && form.controls.country.invalid"
+          ><small>err</small></span
+        ></span
+      >
+      <input formControlName="country" id="country" type="text" />
+      <span
+        ><label for="phone">Phone</label
+        ><span
+          *ngIf="form.controls.phone.touched && form.controls.phone.invalid"
+          ><small *ngIf="form.controls.phone.errors.required">required</small>
+          <small *ngIf="form.controls.phone.errors.pattern"
+            >only numbers</small
+          ></span
+        ></span
+      >
+      <input  formControlName="phone" id="phone" type="tel" />
+    </div>
+    <div class="btns">
+      <button routerLink="/cart" class="back">Back</button>
+      <button [disabled]="form.invalid " type="submit" class="submit" (click)="submit()">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="top">
+    <div class="about">
+      <div routerLink="/" class="logo">
+          <i  class="fas fa-mouse"></i>
+      </div>
+      <div class="about_us">
+        <p>About Us</p>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nobis!</div>
+      </div>
+      <div class="contact_us">
+        <p>Contact Us</p>
+        <div class="phone"><i class="fas fa-phone-volume"></i> : +380934782387</div>
+        <div class="email"><i class="fas fa-envelope"></i> : some@email.com</div>
+      </div>
+    </div>
+    <div class="information">
+      <p>Information</p>
+      <a routerLink="/about">About Us</a>
+      <a routerLink="#">Events</a>
+      <a routerLink="#">Blog</a>
+    </div>
+    <div class="links">
+      <p>Helpful Links</p>
+      <a routerLink="#">Services</a>
+      <a routerLink="#">Supports</a>
+      <a routerLink="#">Team</a>
+      <a routerLink="#">Privacy Policy</a>
+    </div>
+    <div class="subscribe">
+      <span>
+        Subscribe more info
+      </span>
+      <input [(ngModel)]="footerEmail" placeholder="email" type="text">
+      <button (click)="sendEmail()">Subscribe</button>
+    </div>
+  </div>
+  <div class="down">
+    <div class="social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter-square"></i>
+      <i class="fab fa-google-plus"></i>
+      <i class="fab fa-instagram-square"></i>
+    </div>
+    <div class="copirate">
+      2020 &copy; Best Company. All Right Reserved
+    </div>
+  </div>
+</footer>
+
